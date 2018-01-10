@@ -179,7 +179,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>C:\Users\UPJV\Desktop\Main\of_v0.9.8_vs_release\addons\ofxLeapMotion2\libs\lib\x64\Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(OF_ROOT)\addons\ofxLeapMotion2\libs\lib\x64\Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\UPJV\Desktop\Main\of_v0.9.8_vs_release\addons\ofxLeapMotion2\libs\lib\x64;C:\Users\UPJV\Desktop\Main\of_v0.9.8_vs_release\addons\ofxLeapMotion2\libs\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX64</TargetMachine>
@@ -246,6 +246,7 @@
     <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscReceiver.h" />
     <ClInclude Include="..\..\..\addons\ofxOsc\src\ofxOscSender.h" />
     <ClInclude Include="src\chain.h" />
+    <ClInclude Include="src\graph.h" />
     <ClInclude Include="src\mainCam.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\point.h" />

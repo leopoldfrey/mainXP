@@ -1,10 +1,10 @@
 <Settings>
 	<General_Settings>
 		<User_A_B>1</User_A_B>
-		<ip1>192</ip1>
-		<ip2>168</ip2>
+		<ip1>10</ip1>
+		<ip2>0</ip2>
 		<ip3>0</ip3>
-		<ip4>33</ip4>
+		<ip4>1</ip4>
 		<volume>1.96429</volume>
 	</General_Settings>
 	<Advanced_Settings>
@@ -25,12 +25,12 @@
 		<colorB>0, 0.781341, 0.297168, 1</colorB>
 		<randomColor>0.0765306</randomColor>
 		<colorMode>1</colorMode>
-		<Sound>1</Sound>
+		<Sound>0</Sound>
 		<soundA>1</soundA>
 		<soundB>1</soundB>
 		<soundInfluence>0</soundInfluence>
 	<Palm_Finger>1</Palm_Finger>
-		<Grid>0</Grid>
+		<Grid>1</Grid>
 		<Origin>0</Origin>
 		<Move_Camera>1</Move_Camera>
 		<Draw_Mode>0</Draw_Mode>

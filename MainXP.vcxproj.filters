@@ -200,6 +200,7 @@
     <ClInclude Include="..\..\..\addons\ofxLeapMotion2\libs\include\LeapMath.h">
       <Filter>src\ofxLeapMotion2</Filter>
     </ClInclude>
+    <ClInclude Include="src\graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

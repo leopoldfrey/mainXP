@@ -7,3 +7,9 @@ obj/
 release/
 src_old/
 ._*
+*.csv
+bin/data/log.txt
+bin/Main_v1.2.exe
+bin/Main_v1.2.exp
+bin/Main_v1.2.lib
+bin/data/log.txt

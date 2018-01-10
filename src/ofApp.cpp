@@ -5,8 +5,10 @@
 
 void ofApp::setup() {
     
-    ofLogToFile("log.txt", true);
-    //ofLogToConsole();
+	initCam = false;
+
+    //ofLogToFile("log.txt", true);
+    ofLogToConsole();
     
     ofTrueTypeFont::setGlobalDpi(72);
     
@@ -35,11 +37,12 @@ void ofApp::setup() {
     ofClear(0,0,0, 0);
     fbo.end();
     
-    leap.setReceiveBackgroundFrames(true);
-    leap.open();
-    
-    cam.setOrientation(ofPoint(-20, 0, 0));
-    
+	cam.setOrientation(ofPoint(-20, 0, 0));
+
+
+	leap.setReceiveBackgroundFrames(true);
+	leap.open();
+
     initGui();
     initSound();
     
@@ -109,6 +112,14 @@ void ofApp::update() {
 }
 
 void ofApp::draw() {
+
+	if (initCam == false)
+	{
+		initCpt++;
+		if (initCpt == 10)
+			initCam = true;
+	}
+		
     if(graphMode)
     {
         graphDraw();
@@ -289,8 +300,10 @@ void ofApp::fboDraw() {
         prevCamTarget = target;
     } else {
         //ofLog() << "NO HANDS";
+		//cam.reset();
         cam.setTarget(ofVec3f(0.,0.,0.));
-    }
+		//cam.setOrientation(ofPoint(-20, 0, 0));
+	}
     if(grid)
     {
         ofPushMatrix();
@@ -421,9 +434,9 @@ void ofApp::keyPressed(int key) {
         graphMode = !graphMode;
         if(graphMode)
         {
-            if(isRecording)
+            //if(isRecording)
                 stopRec();
-            if(isPlaying)
+            //if(isPlaying)
                 stopPlay();
             initGraph();
         }
@@ -667,6 +680,9 @@ void ofApp::saveScenari() {
 }
 
 void ofApp::nextScenario() {
+	//ofLog() << "nextScenario";
+	if (isPlaying)
+		return;
     if(scenari.size() == 0)
         return;
     currentScenario++;
@@ -986,6 +1002,8 @@ void ofApp::leapUpdate() {
     fingersFound.clear();
     simpleHands = leap.getSimpleHands();
     
+	if (initCam == false)
+		return;
     
     if( leap.isFrameNew() )
     {
@@ -1442,6 +1460,7 @@ void ofApp::startPlay() {
                 {
                     getline (playFile,line);
                     int scenarioValue = ofToInt(split(line, ' ')[1]);
+					ofLog() << "scenario " << scenarioValue;
                     
                     if(scenarioValue >= 0 && scenarioValue < scenari.size())
                     {
@@ -1477,6 +1496,8 @@ void ofApp::startPlay() {
 }
 
 void ofApp::playUpdate() {
+	if (!isPlaying)
+		return;
     if(playFile.is_open())
     {
         curTime = ofGetSystemTime() - playTime;
@@ -1550,6 +1571,10 @@ void ofApp::playLine() {
 void ofApp::stopPlay() {
     playFile.close();
     isPlaying = false;
+	remPlayL.stop();
+	remPlayR.stop();
+	playL.stop();
+	playR.stop();
     ofLog() << "Stop playing";
     textFade = 255;
 }

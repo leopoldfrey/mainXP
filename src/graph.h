@@ -177,7 +177,7 @@ public:
         ofEnableSmoothing();
         
         ofSetLineWidth(2);
-        glBegin(GL_LINE_STRIP);
+        //glBegin(GL_LINE_STRIP);
         float v, curV;
         int t, curT, prevT;
         leapPoint p;
@@ -185,8 +185,8 @@ public:
         bool first = true;
         ofPoint prevPt;
         ofPoint curPt;
-        int startTime = start*maxTime;
-        int endTime = end*maxTime;
+		int startTime = start*maxTime;
+		int endTime = end*maxTime;
         for(int i = 0 ; i < histo.size() ; i++) {
             t = histo[i].time;
             if(t >= startTime && t <= endTime)
@@ -221,11 +221,12 @@ public:
                             glVertex2f(curT, curV);
                         }
                     }
-                }
+                }//*/
                 prevPt = curPt;
             }
         }
-        glEnd();
+        if(!first)
+			glEnd();
         
         /*
         ofSetColor(ofColor::lightPink);
