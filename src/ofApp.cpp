@@ -7,8 +7,8 @@ void ofApp::setup() {
     
 	initCam = false;
 
-    //ofLogToFile("log.txt", true);
-    ofLogToConsole();
+    ofLogToFile("log.txt", true);
+    //ofLogToConsole();
     
     ofTrueTypeFont::setGlobalDpi(72);
     

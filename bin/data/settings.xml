@@ -25,7 +25,7 @@
 		<colorB>0, 0.781341, 0.297168, 1</colorB>
 		<randomColor>0.0765306</randomColor>
 		<colorMode>1</colorMode>
-		<Sound>0</Sound>
+		<Sound>1</Sound>
 		<soundA>1</soundA>
 		<soundB>1</soundB>
 		<soundInfluence>0</soundInfluence>
