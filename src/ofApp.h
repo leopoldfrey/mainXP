@@ -4,7 +4,7 @@
 #define _DNS_SD_LIBDISPATCH 0
 #define USE_ZEROCONF 0
 
-#define VERSION 1.2
+#define VERSION 1.3
 #define NUM_SOUNDS 5
 
 #include "ofMain.h"
