@@ -1153,9 +1153,16 @@ void ofApp::addRemotePoint(bool left, leapPoint _p)
     p.y += ofRandom(-rndPos, rndPos)*100.;
     p.z += ofRandom(-rndPos, rndPos)*100.;
     
-    p.x += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
-    p.y += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
-    p.z += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
+    if(twoPlayers && !doSelf) // on ne produit pas son donc on peut pas en envoyer !
+    {
+        p.x += snd*smoothedVol*ofRandom(-5000., 5000.);
+        p.y += snd*smoothedVol*ofRandom(-5000., 5000.);
+        p.z += snd*smoothedVol*ofRandom(-5000., 5000.);
+    } else {
+        p.x += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
+        p.y += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
+        p.z += snd*remoteSmoothedVol*ofRandom(-5000., 5000.);
+    }
     
     ofFloatColor colLeft, colRight;
     if(!colorMode)
@@ -1203,7 +1210,7 @@ void ofApp::addRemotePoint(bool left, leapPoint _p)
         }
         
         ofVec3f vel = p - getPoint(remLastLeft);
-        remLeftChain.addPoint(point(p, vel, colLeft, remoteSmoothedVol*100.), smooth);
+        remLeftChain.addPoint(point(p, vel, colLeft, (twoPlayers && !doSelf ? smoothedVol : remoteSmoothedVol)*100.), smooth);
         remLastLeft = _p;
     } else {
         int semitone = scaleFilter(zmap(p.x, -400., 400., -12, 12));
@@ -1218,7 +1225,7 @@ void ofApp::addRemotePoint(bool left, leapPoint _p)
         }
         
         ofVec3f vel = p - getPoint(remLastRight);
-        remRightChain.addPoint(point(p, vel, colRight,remoteSmoothedVol*100.), smooth);
+        remRightChain.addPoint(point(p, vel, colRight, (twoPlayers && !doSelf ? smoothedVol : remoteSmoothedVol)*100.), smooth);
         remLastRight = _p;
     }
 }
@@ -1460,7 +1467,6 @@ void ofApp::startPlay() {
                 {
                     getline (playFile,line);
                     int scenarioValue = ofToInt(split(line, ' ')[1]);
-					ofLog() << "scenario " << scenarioValue;
                     
                     if(scenarioValue >= 0 && scenarioValue < scenari.size())
                     {
