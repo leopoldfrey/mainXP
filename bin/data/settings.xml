@@ -8,9 +8,9 @@
 		<volume>1.96429</volume>
 	</General_Settings>
 	<Advanced_Settings>
-		<Two_players>0</Two_players>
+		<Two_players>1</Two_players>
 		<Self>1</Self>
-		<Remote>0</Remote>
+		<Remote>1</Remote>
 		<palm_finger>1</palm_finger>
 		<grid>1</grid>
 		<origin>0</origin>
@@ -30,21 +30,21 @@
 		<soundB>1</soundB>
 		<soundInfluence>0</soundInfluence>
 	<Palm_Finger>1</Palm_Finger>
-		<Grid>1</Grid>
+		<Grid>0</Grid>
 		<Origin>0</Origin>
 		<Move_Camera>1</Move_Camera>
 		<Draw_Mode>0</Draw_Mode>
 		<Deviation>0</Deviation>
 		<Decay>0.969388</Decay>
-		<Trail_Length>0.158163</Trail_Length>
+		<Trail_Length>0.229592</Trail_Length>
 		<Random_Position>0</Random_Position>
 		<Size>18.6071</Size>
 		<Color_A>1, 0.708455, 0, 1</Color_A>
 		<Color_B>0, 0.781341, 0.297168, 1</Color_B>
-		<Random_Color>0.0765306</Random_Color>
+		<Random_Color>0.423469</Random_Color>
 		<Color_Mode>0</Color_Mode>
 		<Sound_A>1</Sound_A>
-		<Sound_B>1</Sound_B>
+		<Sound_B>2</Sound_B>
 		<Sound_Influence>0</Sound_Influence>
 	<Position_to_Color>0</Position_to_Color>
 	</Advanced_Settings>

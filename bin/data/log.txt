@@ -17,3 +17,51 @@
 [notice ] Loading scenario 1 "1.2_Ligne_+_Piano"
 [warning] ofxLeapMotionApp - onExit: 
 [notice ] Exit
+
+
+--------------------------------------- 2018-01-10-16-56-29-302
+[notice ] Version 1.2
+[notice ] Local IP Adress 10.0.0.2
+[ error ] ofxOscSender: couldn't create sender to empty host
+[ error ] ofxOscSender: couldn't create sender to empty host
+[notice ] Setting Hostname "10.168.0.19"
+[notice ] Connected to host : 10.168.0.19
+[notice ] Setting Hostname "10.0.0.19"
+[notice ] Connected to host : 10.0.0.19
+[notice ] Setting Hostname "10.0.0.1"
+[notice ] Connected to host : 10.0.0.1
+[notice ] Connected to host : 10.0.0.1
+[notice ] Scenari loaded (23)
+[notice ] Loading scenario 0 "1.1_Ligne"
+[warning] ofxLeapMotionApp - onExit: 
+[notice ] Exit
+
+
+--------------------------------------- 2018-01-11-11-41-10-348
+[notice ] Version 1.2
+[notice ] Local IP Adress 127.0.0.1
+[warning] ofxLeapMotionApp - onConnect: 
+[ error ] ofxOscSender: couldn't create sender to empty host
+[ error ] ofxOscSender: couldn't create sender to empty host
+[notice ] Setting Hostname "10.168.0.19"
+[ error ] ofxOscSender: couldn't create sender to 10.168.0.19 on port 14001 : unable to connect udp socket
+[ error ] ofxOscSender: couldn't create sender to 10.168.0.19 on port 14011 : unable to connect udp socket
+[notice ] Setting Hostname "10.0.0.19"
+[notice ] Connected to host : 10.0.0.19
+[notice ] Setting Hostname "10.0.0.1"
+[notice ] Connected to host : 10.0.0.1
+[notice ] Connected to host : 10.0.0.1
+[notice ] Scenari loaded (23)
+[notice ] Loading scenario 0 "1.1_Ligne"
+[notice ] Opening file : "MainRec_110118_112932_20.csv"
+[notice ] scenario 20
+[notice ] Loading scenario 20 "4.3_Interaction_C"
+[notice ] Start playing : "MainRec_110118_112932_20.csv" Version 1.2 Scenario 20 Duration 22.209s
+[notice ] Stop playing
+[notice ] Opening file : "MainRec_110118_112921_19.csv"
+[notice ] scenario 19
+[notice ] Loading scenario 19 "4.2_Interaction_B"
+[notice ] Start playing : "MainRec_110118_112921_19.csv" Version 1.2 Scenario 19 Duration 11.549s
+[notice ] Stop playing
+[warning] ofxLeapMotionApp - onExit: 
+[notice ] Exit
